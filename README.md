@@ -1,4 +1,15 @@
-## Información sobre el Desafio 13
+## Proyecto Final
+
+Se agrego la posibilidad de finalizar la compra desde el carrito, una vez finalizada la misma se generara un ticket con informacion de la compra y ademas le llegara un email al usuario con dicha informacion del ticket.
+
+Se agrego para los usuarios con rol "ADMIN" una opcion desde el boton "Administrador" llamada "Usuarios", en la misma se listaran todos los usuarios y se brinda la posibilidad de modificar el rol y eliminarlos.
+
+Se agregaron las rutas para eliminar aquellos usuarios que estuvieron mas de 2 dias inactivos, asi como la ruta para listar todos los usuarios, las mismas las detallo a continuacion:
+
+- **DELETE**        http://localhost:8080/api/users
+- **GET**           http://localhost:8080/api/users
+
+## Temas de clases pasadas
 
 Se agrego la posibilidad de subir foto de perfil y documentos, para ello se modifico el modelo de Users, se agregaron 4 rutas nuevas las cuales permiten administrar dicho contenido:
 
@@ -25,8 +36,6 @@ Para la administracion ademas agregue una vista desde donde se puede cargar la f
 Para que funcione esta ultima ruta es necesario estar logueado. Las pruebas tambien pueden hacerse con algun cliente REST, pero a los fines de facilitar las pruebas realice la vista **view/profile**.
 
 Ademas se agrego la funcionalidad para que se actualice el campo **last_connection** al modelo Users para almacenar la hora que se conecta el usuario.
-
-## Temas de clases pasadas
 
 Se agrego la posibilidad de realizar testing unitario, para ello se agregaron las librerias "chai", "mocha" y "supertest".
 Se agrego el archivo **test/supertest.test.js** en el raiz del producto. Ademas se agrego en el package.json el comando "test" el cual permite correr el test: **npm run test**
