@@ -1,0 +1,38 @@
+<h1 class="text-center">Usuarios</h1>
+<hr>
+<div class="container" style="padding:30px 0;">
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Rol</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+                <tr>
+                    <td class="text-center">{{email}}</td>
+                    <td class="text-center">{{first_name}}</td>
+                    <td class="text-center">{{last_name}}</td>
+                    <td class="text-center">{{age}}</td>
+                    <td class="text-center">{{role}}</td>
+                    <td class="text-center">
+                        <button class="btn" onclick="changeRole('{{_id}}');">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn" onclick="deleteUser('{{_id}}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/users.js"></script>
